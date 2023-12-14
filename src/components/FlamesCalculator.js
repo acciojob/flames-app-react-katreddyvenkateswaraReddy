@@ -4,10 +4,10 @@ const FlamesCalculator = () => {
   const [firstName, setFirstname] = useState("");
   const [secondName, setSecondName] = useState("");
   const [relationshipStatus, setRelationshipStatus] = useState("");
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
   const calculateRelationship = () => {
-    
+
     if (!firstName.trim() || !secondName.trim()) {
       setError('Please Enter valid input');
       return;
@@ -50,10 +50,10 @@ const FlamesCalculator = () => {
   };
 
   const clearInputs = () => {
-    setFirstname('');
-    setSecondName('');
-    setRelationshipStatus('');
-    setError('');
+    setFirstname("");
+    setSecondName("");
+    setRelationshipStatus("");
+    setError("");
   };
 
   return (
