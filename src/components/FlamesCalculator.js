@@ -7,6 +7,7 @@ const FlamesCalculator = () => {
   const [error, setError] = useState('');
 
   const calculateRelationship = () => {
+    
     if (!firstName.trim() || !secondName.trim()) {
       setError('Please Enter valid input');
       return;
@@ -57,8 +58,8 @@ const FlamesCalculator = () => {
 
   return (
     <div>
-      <input type="text" value={firstName} placeholder="Enter first name" onChange={(e) => setFirstname(e.target.value)} data-testid="input1" />
-      <input type="text" value={secondName} placeholder="Enter second name" onChange={(e) => setSecondName(e.target.value)} data-testid="input2" />
+      <input type="text" value={firstName} name="name1" placeholder="Enter first name" onChange={(e) => setFirstname(e.target.value)} data-testid="input1" />
+      <input type="text" value={secondName} name="name2" placeholder="Enter second name" onChange={(e) => setSecondName(e.target.value)} data-testid="input2" />
       <button onClick={calculateRelationship} data-testid="calculate_relationship">Calculate Relationship Future</button>
       <button onClick={clearInputs} data-testid="clear">Clear</button>
       <h3 data-testid="answer">{error ? error : relationshipStatus}</h3>
