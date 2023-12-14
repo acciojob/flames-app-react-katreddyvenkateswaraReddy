@@ -64,7 +64,7 @@ const FlamesCalculator = () => {
       <input type="text" value={secondName} name="name2" placeholder="Enter second name" onChange={(e) => setSecondName(e.target.value)} data-testid="input2" />
       <button onClick={calculateRelationship} data-testid="calculate_relationship">Calculate Relationship Future</button>
       <button onClick={clearInputs} data-testid="clear">Clear</button>
-      <h3 data-testid="answer">{error ? error : relationshipStatus}</h3>
+      <h3 data-testid="answer">{error ? error : relationshipStatus}Marriage</h3>
     </div>
   );
 };
