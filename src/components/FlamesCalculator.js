@@ -12,9 +12,9 @@ const FlamesCalculator = () => {
       setError('Please Enter valid input');
       return;
     }
-
-    let remainingName1 = firstName;
-    let remainingName2 = secondName;
+    
+    let remainingName1 = firstName.toLowerCase();
+    let remainingName2 = secondName.toLowerCase();
 
     for (let char of firstName) {
       if (secondName.includes(char)) {
