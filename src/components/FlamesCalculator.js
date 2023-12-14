@@ -12,12 +12,14 @@ const FlamesCalculator = () => {
       setError('Please Enter valid input');
       return;
     }
-    
-    let remainingName1 = firstName.toLowerCase();
-    let remainingName2 = secondName.toLowerCase();
 
-    for (let char of firstName) {
-      if (secondName.includes(char)) {
+    const lowercaseFirstName = firstName.toLowerCase();
+    const lowercaseSecondName = secondName.toLowerCase();
+    let remainingName1 = lowercaseFirstName;
+    let remainingName2 = lowercaseSecondName;
+
+    for (let char of lowercaseFirstName) {
+      if (lowercaseSecondName.includes(char)) {
         remainingName1 = remainingName1.replace(char, '');
         remainingName2 = remainingName2.replace(char, '');
       }
